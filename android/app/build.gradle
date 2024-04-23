@@ -61,9 +61,7 @@ android {
             signingConfig signingConfigs.debug
             isDebuggable = false
         }
-        debug {
-            isDebuggable = true
-        }
+    }
 }
 
 flutter {
