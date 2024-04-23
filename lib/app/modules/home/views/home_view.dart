@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
       drawer: getDrawer(),
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: ()=>{}, icon: Icon(Icons.settings_input_component_sharp, color: Vx.blue800,))
+          IconButton(onPressed: ()=>{}, icon: Icon(LineIcons.cog, color: Vx.blue800,))
         ],
         iconTheme: IconThemeData(color: Vx.blue800),
         backgroundColor: Vx.white,
