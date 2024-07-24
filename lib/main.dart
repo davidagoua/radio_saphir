@@ -10,11 +10,10 @@ void main() {
 
   runApp(
     GetMaterialApp(
+
       title: "Radio Saphir",
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(),
-
       ),
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,

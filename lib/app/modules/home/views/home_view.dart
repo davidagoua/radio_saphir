@@ -21,18 +21,18 @@ class HomeView extends GetView<HomeController> {
       drawer: getDrawer(),
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: ()=>{}, icon: const Icon(LineIcons.cog, color: Vx.blue800,))
+          IconButton(onPressed: ()=>{}, icon: Icon(LineIcons.cog, color: Vx.blue800,))
         ],
-        iconTheme: const IconThemeData(color: Vx.blue800),
+        iconTheme: IconThemeData(color: Vx.blue800),
         backgroundColor: Vx.white,
         elevation: 0,
-        titleTextStyle: const TextStyle(color: Vx.blue800, fontSize: 22),
+        titleTextStyle: TextStyle(color: Vx.blue800, fontSize: 22),
         title: const Text('Radio Saphir'),
         centerTitle: true,
       ),
       body: Obx(()=>IndexedStack(
         index: controller.indexStack(),
-        children:  const [
+        children:  [
           ResumeView(),
           LiveView(),
           NewsView(),
