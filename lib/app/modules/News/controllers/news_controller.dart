@@ -1,6 +1,4 @@
-import 'dart:developer';
 
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:wordpress_api/wordpress_api.dart';
 
@@ -20,18 +18,10 @@ class NewsController extends GetxController with StateMixin {
 
     final WPResponse res = await api.posts.fetch();
     for (final post in res.data) {
-      this.posts.value.add(post);
+      posts.value.add(post);
     }
     change(res.data, status: RxStatus.success());
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 }

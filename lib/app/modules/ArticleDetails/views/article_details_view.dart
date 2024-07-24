@@ -13,9 +13,9 @@ class ArticleDetailsView extends GetView<ArticleDetailsController> {
       appBar: AppBar(
         backgroundColor: Vx.white,
         elevation: 0,
-        iconTheme: IconThemeData(color: Vx.blue800),
-        titleTextStyle: TextStyle(color: Vx.blue800, fontSize: 22),
-        title: Text("Article"),
+        iconTheme: const IconThemeData(color: Vx.blue800),
+        titleTextStyle: const TextStyle(color: Vx.blue800, fontSize: 22),
+        title: const Text("Article"),
         centerTitle: true,
       ),
       body: VStack([

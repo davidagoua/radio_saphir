@@ -16,18 +16,6 @@ class ResumeController extends GetxController {
     {"nom":"Valeur d'ici", "image":"images/valeur.jpg"},
   ];
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 }

@@ -13,10 +13,10 @@ class LiveView extends GetView<LiveController> {
     return Scaffold(
       body: VStack([
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
                 begin: Alignment.topLeft, 
                 end: Alignment.bottomRight, 
                 colors: <Color>[Vx.blue500, Vx.blue900]

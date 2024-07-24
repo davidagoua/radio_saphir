@@ -10,7 +10,8 @@ void main() {
 
   runApp(
     GetMaterialApp(
-      title: "Application",
+      title: "Radio Saphir",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(),
 

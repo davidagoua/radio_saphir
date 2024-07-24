@@ -13,17 +13,9 @@ class ArticleDetailsController extends GetxController with StateMixin {
   }
   
   getMedia() async {
-    final WPResponse res = await api.fetch('wp-json/wp/v2/media/'+Get.parameters['media']!);
+    final WPResponse res = await api.fetch('wp-json/wp/v2/media/${Get.parameters['media']!}');
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
 }

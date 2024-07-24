@@ -13,8 +13,8 @@ class NewsDetailsView extends GetView<NewsDetailsController> {
       appBar: AppBar(
         backgroundColor: Vx.white,
         elevation: 0,
-        iconTheme: IconThemeData(color: Vx.blue800),
-        titleTextStyle: TextStyle(color: Vx.blue800, fontSize: 22),
+        iconTheme: const IconThemeData(color: Vx.blue800),
+        titleTextStyle: const TextStyle(color: Vx.blue800, fontSize: 22),
         title: Text("${Get.parameters["nom"]}"),
         centerTitle: true,
       ),

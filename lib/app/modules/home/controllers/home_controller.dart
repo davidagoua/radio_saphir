@@ -16,31 +16,22 @@ class HomeController extends GetxController {
     radioPlayer.setChannel(title: "Radio Saphir", url: urlstream);
     updatePlay();
     radioPlayer.stateStream.listen((value) {
-      this.isPlaying.value = value;
+      isPlaying.value = value;
     });
   }
 
-  @override
-  void onReady() {
-    super.onReady();
 
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   updatePlay(){
   }
 
   pausePlay() {
-    if(this.isPlaying()){
+    if(isPlaying()){
       radioPlayer.pause();
     }else{
       radioPlayer.play();
     }
-    this.isPlaying.toggle();
+    isPlaying.toggle();
   }
 
 }

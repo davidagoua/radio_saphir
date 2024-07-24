@@ -13,11 +13,23 @@ class InfosView extends GetView<InfosController> {
     return Scaffold(
       body: VStack([
         Container(
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[Vx.blue500, Vx.blue900]
+              )
+          ),
           child: HStack([
             LineIcon.info(size: 60, color: Vx.white,),
-            "A propos".text.size(20).color(Vx.white).make()
+            10.widthBox,
+            [
+              "A propos".text.size(20).bold.color(Vx.white).make(),
+            ].vStack(crossAlignment: CrossAxisAlignment.center)
           ], alignment: MainAxisAlignment.center, crossAlignment: CrossAxisAlignment.center,).w(double.maxFinite),
-        ).p(10).card.color(Vx.blue800).make().w(double.maxFinite),
+        ).w(double.maxFinite).h(Get.height / 10 *2.5),
         15.heightBox,
         VStack([
           Container(
