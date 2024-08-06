@@ -14,9 +14,18 @@ class ResumeView extends GetView<ResumeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Vx.white,
       body: VStack([
         getSwiper(),
 
+        10.heightBox,
+
+        HStack([
+          "Nos émissions".text.bold.size(17).make().pOnly(left: 10),
+          GestureDetector(
+            child: "Voir tout".text.bold.color(Vx.blue500).make().pOnly(right: 10),
+          )
+        ], alignment: MainAxisAlignment.spaceBetween, crossAlignment: CrossAxisAlignment.center,).w(double.maxFinite),
         10.heightBox,
 
         getEmissions(context),
@@ -27,12 +36,13 @@ class ResumeView extends GetView<ResumeController> {
 
   Widget getSwiper(){
     return Container(
+      color: Vx.white,
       child:  VxSwiper.builder(
         itemCount: 10,
         height: 400,
         itemBuilder: (context, index) {
           var emission = controller.emissions[index];
-          return Image.asset(emission["image"] ?? '').card.roundedSM.make();
+          return AspectRatio(aspectRatio: 16/9, child: Image.asset(emission["image"] ?? '', fit: BoxFit.fitWidth, ).card.roundedSM.make(),);
         },
       ),
     ).h(Get.height / 10 * 2.5);
@@ -40,34 +50,8 @@ class ResumeView extends GetView<ResumeController> {
 
   Widget getEmissions(BuildContext context){
     return VStack([
-      HStack([
-        "Nos emissions".text.bold.size(17).make().pOnly(left: 10),
-        GestureDetector(
-          child: "Voir tout".text.bold.color(Vx.blue500).make().pOnly(right: 10),
-        )
-      ], alignment: MainAxisAlignment.spaceBetween, crossAlignment: CrossAxisAlignment.center,).w(double.maxFinite),
-      10.heightBox,
-      
-      /*
-      ...controller.emissions.map((e) => ListTile(
-        onTap: ()=>{
-          Get.toNamed(Routes.NEWS_DETAILS, parameters: {
-            "nom": e['nom'] ?? "",
-            "image": e["image"] ?? "",
-            "description": "description de l'emission"
-          })
-        },
-        title: "${e['nom']}".text.make(),
-        subtitle: "description de l'emission".text.make(),
-        leading: VxCard(Image.asset("${e['image']}"),).make(),
-      )),
-       */
-
       ...controller.emissions.map((e) => getEmissionOverview(context, e)),
-
-
-
-    ]).scrollVertical().expand();
+    ]).scrollVertical().card.elevation(0).white.topLeftRounded(value: 45).make().marginZero.expand();
   }
 
   Widget getPlayPause(){
@@ -100,8 +84,7 @@ class ResumeView extends GetView<ResumeController> {
   Widget getEmissionOverview(BuildContext context, Map<String, dynamic> e){
     return Container(
       width: double.maxFinite,
-      padding: EdgeInsets.all(10),
-      color: Vx.blue50,
+      padding: EdgeInsets.all(0),
       child: HStack([
         Image.asset("${e['image']}", height: 80,),
         5.widthBox,
@@ -113,13 +96,13 @@ class ResumeView extends GetView<ResumeController> {
         VStack([
           LineIcon.heart(size: 15, color: Vx.blue500,)
         ]),
-      ], crossAlignment: CrossAxisAlignment.start,)
+      ], crossAlignment: CrossAxisAlignment.start, alignment: MainAxisAlignment.spaceBetween,)
     ).onTap(() {
       Get.toNamed(Routes.NEWS_DETAILS, parameters: {
       "nom": e['nom'] ?? "",
       "image": e["image"] ?? "",
       "description": "description de l'emission si jamais y'en a"
       });
-    }).marginOnly(top: 3, left: 10, right: 10).card.elevation(0).roundedSM.make();
+    }).marginOnly(top: 3, left: 10, right: 10).card.blue50.elevation(0).roundedSM.make();
   }
 }

@@ -17,7 +17,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Vx.gray100,
+      backgroundColor: Vx.white,
       drawer: getDrawer(),
       appBar: AppBar(
         actions: [
@@ -62,12 +62,14 @@ class HomeView extends GetView<HomeController> {
         onPressed: ()=> {
           controller.pausePlay()
         },
+        backgroundColor: Colors.transparent,
         child: Container(
+          color: Colors.transparent,
           child:  Obx(()=> controller.isPlaying()
               ? Lottie.network("https://assets6.lottiefiles.com/packages/lf20_tfifue0y.json")
               : Lottie.network("https://assets1.lottiefiles.com/packages/lf20_4gwqaodh.json")
           ),
-        ).w(Get.width / 12 * 3),
+        ).circle().w(Get.width / 12 * 3),
       ),
     );
   }
