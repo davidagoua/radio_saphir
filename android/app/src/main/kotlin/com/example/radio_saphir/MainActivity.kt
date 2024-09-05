@@ -1,4 +1,4 @@
-package com.example.radio_saphir
+package com.jeunetic.radio_saphir
 
 import io.flutter.embedding.android.FlutterActivity
 
