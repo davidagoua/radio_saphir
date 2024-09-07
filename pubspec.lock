@@ -117,10 +117,18 @@ packages:
     dependency: transitive
     description:
       name: dio
-      sha256: "7d328c4d898a61efc3cd93655a0955858e29a0aa647f0f9e02d59b3bb275e2e8"
+      sha256: "5598aa796bbf4699afd5c67c0f5f6e2ed542afc956884b9cd58c306966efc260"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.6"
+    version: "5.7.0"
+  dio_web_adapter:
+    dependency: transitive
+    description:
+      name: dio_web_adapter
+      sha256: "33259a9276d6cea88774a0000cfae0d861003497755969c92faa223108620dc8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -284,18 +292,18 @@ packages:
     dependency: transitive
     description:
       name: logger
-      sha256: "7ad7215c15420a102ec687bb320a7312afd449bac63bfb1c60d9787c27b9767f"
+      sha256: "697d067c60c20999686a0add96cf6aba723b3aa1f83ecf806a8097231529ec32"
       url: "https://pub.dev"
     source: hosted
-    version: "1.4.0"
+    version: "2.4.0"
   lottie:
     dependency: "direct main"
     description:
       name: lottie
-      sha256: "49bbc544e44bf0c734ccda29b182e3516a12f5021ea98b206cf31a168b0f97da"
+      sha256: "6a24ade5d3d918c306bb1c21a6b9a04aab0489d51a2582522eea820b4093b62b"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.0"
+    version: "3.1.2"
   matcher:
     dependency: transitive
     description:
@@ -404,10 +412,10 @@ packages:
     dependency: "direct main"
     description:
       name: radio_player
-      sha256: c7c4f7e004274d46fa5176c4d6e7615782561dec0bc2b91f9772c8e1370710f3
+      sha256: "4073d2f5698e036aaf64c163b40650e174117d1220b9214739064b61a4103b35"
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.1"
+    version: "1.6.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -513,10 +521,10 @@ packages:
     dependency: "direct main"
     description:
       name: wordpress_api
-      sha256: "6142c67af4f16b4f9979cac589b6d3f4efbc7c868d91f0f258dbb160f1b4b2f9"
+      sha256: b4250f12a4716c1896a5e5ff8eeba8a6aa8d5f4fa28581f7bd43ab62a99a25f4
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.0"
+    version: "1.2.0+1"
   xdg_directories:
     dependency: transitive
     description:
